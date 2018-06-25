@@ -17,6 +17,9 @@ import {
 import Qs from 'qs';
 import debounce from 'lodash.debounce';
 
+import withHandleHandWritingTextInput from './withHandleHandWritingTextInput';
+const MyTextInput = withHandleHandWritingTextInput(TextInput);
+
 const WINDOW = Dimensions.get('window');
 
 const defaultStyles = {
@@ -682,7 +685,7 @@ export default class GooglePlacesAutocomplete extends Component {
             style={[this.props.suppressDefaultStyles ? {} : defaultStyles.textInputContainer, this.props.styles.textInputContainer]}
           >
             {this._renderLeftButton()}
-            <TextInput
+            <MyTextInput
               ref="textInput"
               returnKeyType={this.props.returnKeyType}
               autoFocus={this.props.autoFocus}
