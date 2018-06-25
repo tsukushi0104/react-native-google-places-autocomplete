@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Platform } from 'react-native';
+import { Platform, TextInput } from 'react-native';
 
 // https://github.com/facebook/react-native/issues/18403
 const withHandleHandWritingTextInput = (WrappedComponent) => {
-  class HandleHandWritingTextInput extends React.PureComponent {
+  class HandleHandWritingTextInput extends TextInput {
     render() {
       const { onChangeText, onBlur, ...rest } = this.props;
 
