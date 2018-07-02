@@ -18,7 +18,7 @@ const withHandleHandWritingTextInput = (WrappedComponent) => {
         }}
         onBlur={(e) => {
           if (onChangeText) {
-            // onChangeText(this.tempText);
+            onChangeText(this.tempText);
           }
           if (onBlur) {
             onBlur(e);
