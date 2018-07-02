@@ -685,7 +685,7 @@ class GooglePlacesAutocomplete extends Component {
             style={[this.props.suppressDefaultStyles ? {} : defaultStyles.textInputContainer, this.props.styles.textInputContainer]}
           >
             {this._renderLeftButton()}
-            <MyTextInput
+            <TextInput
               ref="textInput"
               returnKeyType={this.props.returnKeyType}
               autoFocus={this.props.autoFocus}
