@@ -18,7 +18,7 @@ import Qs from 'qs';
 import debounce from 'lodash.debounce';
 
 import withHandleHandWritingTextInput from './withHandleHandWritingTextInput';
-const MyTextInput = withHandleHandWritingTextInput(TextInput);
+// const MyTextInput = withHandleHandWritingTextInput(TextInput);
 
 const WINDOW = Dimensions.get('window');
 
@@ -76,7 +76,7 @@ const defaultStyles = {
   },
 };
 
-export default class GooglePlacesAutocomplete extends Component {
+class GooglePlacesAutocomplete extends Component {
   _isMounted = false;
   _results = [];
   _requests = [];
@@ -710,6 +710,10 @@ export default class GooglePlacesAutocomplete extends Component {
   }
 }
 
+GooglePlacesAutocomplete = withHandleHandWritingTextInput(GooglePlacesAutocomplete);
+
+export default GooglePlacesAutocomplete;
+
 GooglePlacesAutocomplete.propTypes = {
   placeholder: PropTypes.string,
   placeholderTextColor: PropTypes.string,
@@ -816,3 +820,4 @@ module.exports = {
   GooglePlacesAutocomplete,
   create
 };
+
