@@ -3,7 +3,7 @@ import { Platform, TextInput } from 'react-native';
 
 // https://github.com/facebook/react-native/issues/18403
 const withHandleHandWritingTextInput = (WrappedComponent) => {
-  class HandleHandWritingTextInput extends React.PureComponent {
+  class HandleHandWritingTextInput extends TextInput {
     constructor(props) {
       super(props);
       this.tempText = props.value;
